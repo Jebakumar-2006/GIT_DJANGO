@@ -1,0 +1,213 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dcd6db; /* Exact matching gray background from image */
+    color: #111111;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Navigation Bar */
+.site-header {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 15px 40px;
+}
+
+.header-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cccccc;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+/* Posts Grid Layout */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 25px;
+}
+
+/* Post Card Style */
+.post-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #cccccc;
+}
+
+.post-image-box {
+    width: 130px;
+    min-width: 130px;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.post-content-box {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.post-header-info h3 a {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #111111;
+}
+
+.post-header-info h3 a:hover {
+    text-decoration: underline;
+}
+
+.category-badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #111111;
+}
+
+.post-excerpt {
+    font-size: 0.9rem;
+    color: #555555;
+    margin: 8px 0;
+}
+
+.read-more {
+    font-size: 0.85rem;
+    color: #0056b3;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Detail Page Specific Styles */
+.back-link-wrapper {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    font-size: 0.95rem;
+    color: #222222;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.detail-article {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.detail-banner {
+    width: 100%;
+    height: 250px;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.detail-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.detail-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.detail-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333333;
+}
+
+.detail-body p {
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    .detail-article {
+        padding: 20px;
+    }
+}
